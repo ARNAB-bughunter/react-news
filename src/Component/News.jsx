@@ -21,7 +21,7 @@ const News = (props) => {
   }, [props.category]);
 
   useEffect(() => {
-    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=ed47b55980e147958625637c882bec24&page=${page}&pageSize=${props.pagesize}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey="api_key"&page=${page}&pageSize=${props.pagesize}`;
     setIsLoading(true);
     fetch(url)
       .then((response) => response.json())
